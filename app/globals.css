@@ -52,6 +52,13 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  /* Evita el "rubber-band" horizontal de Safari/WebViews embebidos
+     (p. ej. el navegador in-app de WhatsApp), que puede desplazar
+     visualmente el contenido unos px y dejar franjas en blanco
+     aunque no exista overflow real. */
+  overscroll-behavior-x: none;
 }
 body {
   font-family: var(--font-body);
@@ -59,6 +66,9 @@ body {
   color: var(--pat-black);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  width: 100%;
+  overscroll-behavior-x: none;
+  position: relative;
 }
 img {
   max-width: 100%;
@@ -74,6 +84,16 @@ button {
   border: 0;
   background: none;
   color: inherit;
+}
+h1, h2, h3, h4, h5, p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--pad);
+  width: 100%;
 }
 :focus-visible {
   outline: 3px solid var(--pat-yellow);
@@ -110,11 +130,6 @@ button {
   color: #3a3a3a;
 }
 
-.wrap {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding-inline: var(--pad);
-}
 .dark {
   background: var(--pat-black);
   color: var(--pat-bone);
