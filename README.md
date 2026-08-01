@@ -5,6 +5,13 @@ prototipo de un solo archivo `index.html` entregado por Renzo. Sigue el
 `README-HOWARD.md` original punto por punto. Este archivo documenta
 **cómo** se hizo el port y qué falta.
 
+> **Panel de administración de contenidos:** el proyecto ahora incluye
+> un CMS real en `/admin` (roles, workflow editorial, versionado,
+> invitaciones, auditoría), implementado sobre
+> `PAT-Modulo-Administracion-Contenidos.md`. Ver **README-CMS.md** para
+> el detalle completo — usuario semilla, qué es real y qué es demo, y
+> qué falta antes de producción.
+
 ## Instalación
 
 ```bash

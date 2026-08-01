@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function Fab() {
   const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
   if (pathname?.startsWith("/mente-real/chat")) return null;
   return (
     <Link href="/mente-real/chat" className="fab" id="fab" aria-label="Hablar con PAT IA">

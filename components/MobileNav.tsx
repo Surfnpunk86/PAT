@@ -6,6 +6,8 @@ import { MOBILE_NAV } from "@/lib/data";
 
 export default function MobileNav() {
   const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <nav className="mob-nav" id="mobnav">
       {MOBILE_NAV.map(({ t, u, d }) => (

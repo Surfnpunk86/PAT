@@ -9,6 +9,8 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <header className="hdr">
       <div className="hdr-in">

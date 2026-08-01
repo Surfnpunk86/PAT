@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import MobileNav from "@/components/MobileNav";
-import Fab from "@/components/Fab";
 
 export const metadata: Metadata = {
   title: "PAT — People Are Talking",
@@ -21,12 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>
-        <Header />
-        <main id="app">{children}</main>
-        <Fab />
-        <MobileNav />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
